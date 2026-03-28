@@ -40,5 +40,7 @@ def drawPattern(t, x, y, count, length, shape):
     t.fillcolor(random.randint(0, 255),random.randint(0, 255),random.randint(0, 255))
     radialPattern(t, count, length, shape)
     t.end_fill()
-
+def circle(t, radius):
+    """Draw a circle with the given turtle t and radius."""
+    t.circle(radius)
 

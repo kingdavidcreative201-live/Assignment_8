@@ -5,7 +5,7 @@ def main():
     t = Turtle()
     t.pencolor("blue")
     t.hideturtle()
-    radialPattern(t, 10, 50, shape = square)
+    radialPattern(t, 10, 50, shape = circle)
 
     # Keep the window open until it is closed by the user
     t.getscreen().exitonclick()
