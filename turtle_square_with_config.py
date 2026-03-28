@@ -31,6 +31,7 @@ def load_config():
         'height': cfg.getint('DEFAULT', 'height', fallback=200),
         'colormode': cfg.getint('DEFAULT','colormode', fallback=255),
         'using_IDLE': cfg.getboolean('DEFAULT','using_IDLE', fallback=True),
+        'pen_color': cfg.get('DEFAULT', 'pen_color', fallback='blue'),
     }
 
 def setup_turtle(config):
@@ -40,7 +41,7 @@ def setup_turtle(config):
     window.colormode(config['colormode'])
     
     t = turtle.Turtle()
-    t.pencolor('blue')
+    t.pencolor(config.get('pen_color','blue'))
     
     return t
 
